@@ -1,0 +1,273 @@
+@charset "utf-8";
+// reset css
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-size: 14px;
+  font-family: 'Microsoft YaHei',sans-serif;;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.f_left{
+  float: left;
+}
+.f_right{
+  float: right;
+}
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+
+//model css
+//主体容器
+.ny_layout{
+  padding-top: 90/@bs;
+  padding-bottom: 100/@bs;
+  background: #f1f3f5;
+}
+.ny_header{
+  width: 100%;
+  height: 90/@bs;
+  background: url("../image/hd.jpg");
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .icon_ny{
+    position: absolute;
+    left: 20/@bs;
+    margin: 10/@bs;
+    width: 70/@bs;
+    height: 70/@bs;
+    background: url("../image/logo.png") no-repeat center / 73/@bs 73/@bs;
+
+  }
+  .icon_dl{
+    position: absolute;
+    top: 0;
+    margin: 15/@bs;
+    right: 20/@bs;
+    width: 174/@bs;
+    height: 60/@bs;
+    background: url("../image/down.png") no-repeat center / 174/@bs 60/@bs;
+  }
+  div{
+    width: 100%;
+    padding-left: 100/@bs;
+    padding-right: 200/@bs;
+    p{
+      font-size: 12/@bs;
+      margin-left: 25/@bs;
+      color: #fff;
+      &.top{
+        margin-top: 10/@bs;
+      }
+      &.bot{
+        margin-top: 10/@bs;
+        color: #ccc;
+      }
+      &.bot:hover{
+        margin-top: 10/@bs;
+        color: #fff;
+      }
+    }
+  }
+}
+//轮播图
+//导航栏
+.ny_nav{
+  width: 100%;
+  ul{
+    width: 100%;
+    background-color: #f1f3f5;
+    li{
+      width: 25%;
+      float: left;
+      a{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 150/@bs;
+        margin: 0 auto;
+        span{
+          text-align: center;
+          display: block;
+          width: 100%;
+          height:100%;
+          background: url("../image/nav.png") no-repeat -187/@bs   0;
+          //background-size: 400% 200%;
+          border-right:1px solid #d4d9de ;
+          border-bottom:1px solid #d4d9de ;
+        }
+        p{
+          width: 100%;
+          text-align: center;
+          position: absolute;
+          bottom: 6/@bs;
+          font-size: 12/@bs;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+//热点资讯
+.ny_hot{
+  width: 100%;
+  .hot_header{
+    position: relative;
+    p{
+      width: 100%;
+      font-size: 30/@bs;
+      margin-top: 10/@bs;
+      padding-left: 80/@bs;
+      padding-right: 160/@bs;
+      span{
+        margin-top: 5/@bs;
+        font-size: 32/@bs;
+      }
+    }
+    .left{
+      position: absolute;
+      //left: 0;
+      margin: 10/@bs;
+      width: 27/@bs;
+      height: 27/@bs;
+      margin-left: 30/@bs;
+      margin-top: 10/@bs;
+      background: url("../image/index.png") no-repeat ;
+      background-size: 1500% 1500%;
+      //background-color: red;
+    }
+    .right{
+      width: 87/@bs;
+      height: 38/@bs;
+      position: absolute;
+      background: url("../image/index.png") no-repeat 0 -162/@bs ;
+      background-size: 400/87*100% 400/38*100%;
+      right: 20/@bs;
+      top:5/@bs;
+    }
+  }
+  .hot_news{
+    color: #666;
+    margin-bottom: 35/@bs;
+
+    //font-size: 18/@bs;
+    width: 100%;
+    &.one{
+      margin-top: 25/
+      @bs;
+    }
+    .left{
+      margin-left: 30/@bs;
+      color: darkblue;
+      position: absolute;
+      left: 0;
+    }
+    .mid{
+      padding-left: 115/@bs;
+    }
+    .right{
+      color: #999;
+      margin-right: 30/@bs;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+//精彩视频
+.ny_video{
+  width: 100%;
+  .vd_header{
+    position: relative;
+    p{
+      width: 100%;
+      font-size: 30/@bs;
+      margin-top: 10/@bs;
+      padding-left: 80/@bs;
+      padding-right: 160/@bs;
+      span{
+        margin-top: 5/@bs;
+        font-size: 32/@bs;
+      }
+    }
+    .left{
+      position: absolute;
+      //left: 0;
+      margin: 10/@bs;
+      width: 28/@bs;
+      height: 25/@bs;
+      margin-left: 30/@bs;
+      margin-top: 10/@bs;
+      background: url("../image/index.png") no-repeat 0 -54/@bs ;
+      background-size: 400/28*100% 400/25*100%;
+      //background-color: red;
+    }
+    .right{
+      width: 87/@bs;
+      height: 38/@bs;
+      position: absolute;
+      background: url("../image/index.png") no-repeat 0 -162/@bs ;
+      background-size: 400/87*100% 400/38*100%;
+      right: 20/@bs;
+      top:5/@bs;
+    }
+  }
+  .ny_vd{
+    width: 100%;
+    video{
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 50/@bs;
+      border-radius: 15/@bs;
+      border: 3px solid peru;
+
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
+//底部页签
+.ny_tabs{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  ul{
+    width: 100%;
+    height: 90/@bs;
+    li{
+      width: 25%;
+      height: 100%;
+      float: left;
+      a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url("../image/snavnew11.png") no-repeat 0 0;
+        background-size: 400% 200%;
+      }
+    }
+  }
+}
+
+
